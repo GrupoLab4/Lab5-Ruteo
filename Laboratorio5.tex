@@ -15,7 +15,7 @@
 \listoffigures
 \chapter{Introducción}
   En este laboratorio tenemos como objetivo aprender a hacer funcionar de forma correcta una red para que las subredes de esta se
-  pueden comunicar entre ellas, entender en que consiste el ruteo estático y el ruteo dinámico, cuáles son sus diferencias y las
+  puedan comunicar entre ellas, entender en que consiste el ruteo estático y el ruteo dinámico, cuáles son sus diferencias y las
   ventajas y desventajas de cada uno, también aprenderemos como configurar una red con cada tipo de ruteo y dentro del ruteo dinámico
   veremos lo que son los protocolos de enrutamiento, enfocándonos en RIP (Routing Information Protocol).
 \chapter{Actividades}
@@ -33,9 +33,9 @@
 	\end{figure}
 	\newpage
 	\section{Configuración Equipos}
-	Se configuran los equipos de manera que cada PC pertenezca a una red distinta, esto se hace en las configuraciones de cada PC
-	donde se le asignan IPs manualmente, y luego se configura el router asignándole una IP perteneciente a la red común con los 
-	PC.\\
+	Se configuran los equipos de manera que cada grupo de PC pertenezca a una subred distinta, esto se hace en las configuraciones de cada PC
+	donde se le asignan IPs y gateway manualmente, y luego se configura el router asignándole a la interfaz una IP perteneciente a la red común con los 
+	PC. También se configuran las interfaces de los enlaces seriales de cada router con una subred distinta para establecer un canal comunicación entre ellos.\\
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{Configuracion_equipos.PNG}
@@ -45,7 +45,7 @@
 	Se ingresa a la terminal del router, luego indicándoles la IP de destino, porque puerto sale, y la IP por donde da el salto
 	para llegar a destino, esto se debe hacer con cada interfaz del router, de manera que dirija cada paquete que reciba a una
 	interfaz y lo pueda enviar. Lo anterior descrito se debe hacer con cada router perteneciente a la topología, para que así las
-	redes queden todas conectadas entre sí.\\
+	subredes queden todas comunicadas entre sí.\\
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{Ruteo_estatico.PNG}
