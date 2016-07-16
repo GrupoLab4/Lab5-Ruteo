@@ -26,19 +26,39 @@
 	routers, hecho esto se procede a instalar el modulo serial en los routers, por lo que eran apagados y luego se les insertaba
 	el modulo. Hecho lo anterior se procede a conectar los router entre si esto se logra a través de un cable serial, una vez
 	terminado esto se continua a seguir con las actividades posteriores.\\
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{Topologia_base.PNG}
+	\caption{Construccion de la Topología Base}
+	\end{figure}\\	
 	\section{Configuracion Equipos}
 	Se configuran los equipos de manera que cada PC pertenezca a una red distinta, esto se hace en las configuraciones de cada PC
 	donde se le asignan IPs manualmente, y luego se configura el router asignándole una IP perteneciente a la red común con los 
 	PC.\\
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{Configuracion_equipos.PNG}
+	\caption{Configuracion de los equipos}
+	\end{figure}\\
 	\section{Configuracion ruteo estático}
 	Se ingresa a la terminal del router, luego indicándoles la IP de destino, porque puerto sale, y la IP por donde da el salto
 	para llegar a destino, esto se debe hacer con cada interfaz del router, de manera que dirija cada paquete que reciba a una
 	interfaz y lo pueda enviar. Lo anterior descrito se debe hacer con cada router perteneciente a la topología, para que así las
 	redes queden todas conectadas entre sí.\\
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{Ruteo_estatico.PNG}
+	\caption{Configuracion de ruteo estatico en los router R0 y R3}
+	\end{figure}\\
 	\section{Configuracion ruteo dinámico}
 	Se ingresa a la terminal del router y se activa RIP V1 de esta manera se configura automáticamente y solo tenemos que
 	indicarle al router cuál es la red que va a utilizar. Esto se logra al ingresar los comandos que estaban especificados en la
 	guía.\\
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{Ruteo_dinamico.PNG}
+	\caption{Configuracion de ruteo dinamico en los router R0 y R3}
+	\end{figure}\\
 {\large \bf{Cuestionario: }}\\
 	\begin{enumerate}
 	    \item ¿Qué ventajas y desventajas se pueden apreciar en cada tipo de enrutamiento?\\\\
