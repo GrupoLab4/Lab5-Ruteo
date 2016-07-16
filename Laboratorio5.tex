@@ -6,7 +6,7 @@
 \date{17 de Julio de 2016}
 \usepackage{graphicx}
 \usepackage{float}
-\graphicspath{ {images/} }
+\graphicspath{ {Imagenes/} }
 \udpschool{Escuela de Informática y Telecomunicaciones}
 
 \begin{document}
@@ -29,9 +29,10 @@
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{Topologia_base.PNG}
-	\caption{Construccion de la Topología Base}
-	\end{figure}\\	
-	\section{Configuracion Equipos}
+	\caption{Construcción de la Topología Base}
+	\end{figure}
+	\newpage
+	\section{Configuración Equipos}
 	Se configuran los equipos de manera que cada PC pertenezca a una red distinta, esto se hace en las configuraciones de cada PC
 	donde se le asignan IPs manualmente, y luego se configura el router asignándole una IP perteneciente a la red común con los 
 	PC.\\
@@ -39,8 +40,8 @@
 	\centering
 	\includegraphics[width=\textwidth]{Configuracion_equipos.PNG}
 	\caption{Configuracion de los equipos}
-	\end{figure}\\
-	\section{Configuracion ruteo estático}
+	\end{figure}
+	\section{Configuración ruteo estático}
 	Se ingresa a la terminal del router, luego indicándoles la IP de destino, porque puerto sale, y la IP por donde da el salto
 	para llegar a destino, esto se debe hacer con cada interfaz del router, de manera que dirija cada paquete que reciba a una
 	interfaz y lo pueda enviar. Lo anterior descrito se debe hacer con cada router perteneciente a la topología, para que así las
@@ -49,7 +50,7 @@
 	\centering
 	\includegraphics[width=\textwidth]{Ruteo_estatico.PNG}
 	\caption{Configuracion de ruteo estatico en los router R0 y R3}
-	\end{figure}\\
+	\end{figure}
 	\section{Configuracion ruteo dinámico}
 	Se ingresa a la terminal del router y se activa RIP V1 de esta manera se configura automáticamente y solo tenemos que
 	indicarle al router cuál es la red que va a utilizar. Esto se logra al ingresar los comandos que estaban especificados en la
@@ -58,29 +59,30 @@
 	\centering
 	\includegraphics[width=\textwidth]{Ruteo_dinamico.PNG}
 	\caption{Configuracion de ruteo dinamico en los router R0 y R3}
-	\end{figure}\\
-{\large \bf{Cuestionario: }}\\
+	\end{figure}
+{\large \bf{Cuestionario: }}
 	\begin{enumerate}
 	    \item ¿Qué ventajas y desventajas se pueden apreciar en cada tipo de enrutamiento?\\\\
-	    VENTAJAS:
-	    Enrutamiento Estático:\\
+	    \underline {VENTAJAS}:\\
+	    Enrutamiento Estático:
 	    \begin{itemize}
 	    	\item El consumo de recursos del router es bajo.
 	    	\item Es fácil de configurar en redes pequeñas.
 	    \end{itemize}
-	    Enrutamiento Dinámico:\\
+	    Enrutamiento Dinámico:
 	    \begin{itemize}
 	    	\item En el mantenimiento de las rutas el encargado casi no debe participar.
 	    	\item Esta configuración tiende a tener menos errores.
 	    \end{itemize}
-	    DESVENTAJAS:\\
-	    Enrutamiento Estático:\\
+	    \underline{DESVENTAJAS}:\\
+	    Enrutamiento Estático:
 	    \begin{itemize}
 	    	\item Para redes grandes es complicado de configurar.
 	    	\item La configuración es propensa a errores.
 	    	\item La configuración, mantención y actualización de rutas se debe hacer manualmente.
 	    	\item No permite una escalabilidad en caso de gran crecimiento de la topología.
-	    Enrutamiento Dinámico:\\
+	    \end{itemize}
+	    Enrutamiento Dinámico:
 	    \begin{itemize}
 	    	\item El consumo de recursos del router es alto.
 	    	\item Se requiere un conocimiento avanzado.
