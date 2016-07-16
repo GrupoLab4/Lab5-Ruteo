@@ -24,8 +24,18 @@
 	el modulo. Hecho lo anterior se procede a conectar los router entre si esto se logra a través de un cable serial, una vez
 	terminado esto se continua a seguir con las actividades posteriores.\\
 	\section{Configuracion Equipos}
+	Se configuran los equipos de manera que cada PC pertenezca a una red distinta, esto se hace en las configuraciones de cada PC
+	donde se le asignan IPs manualmente, y luego se configura el router asignándole una IP perteneciente a la red común con los 
+	PC.\\
 	\section{Configuracion ruteo estático}
+	Se ingresa a la terminal del router, luego indicándoles la IP de destino, porque puerto sale, y la IP por donde da el salto
+	para llegar a destino, esto se debe hacer con cada interfaz del router, de manera que dirija cada paquete que reciba a una
+	interfaz y lo pueda enviar. Lo anterior descrito se debe hacer con cada router perteneciente a la topología, para que así las
+	redes queden todas conectadas entre sí.\\
 	\section{Configuracion ruteo dinámico}
+	Se ingresa a la terminal del router y se activa RIP V1 así de esta manera se configura automáticamente y solo tenemos que
+	indicarle al router cuál es la red que va a utilizar. Esto se logra al ingresar los comandos que estaban especificados en la
+	guía.\\
 {\large \bf{Cuestionario: }}\\
 	\begin{enumerate}
 	    \item ¿Qué ventajas y desventajas se pueden apreciar en cada tipo de enrutamiento?\\\\
