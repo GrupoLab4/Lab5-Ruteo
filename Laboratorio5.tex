@@ -34,32 +34,33 @@
 	\newpage
 	\section{Configuración Equipos}
 	Se configuran los equipos de manera que cada grupo de PC pertenezca a una subred distinta, esto se hace en las configuraciones de cada PC
-	donde se le asignan IPs y gateway manualmente, y luego se configura el router asignándole a la interfaz una IP perteneciente a la red común con los 
-	PC. También se configuran las interfaces de los enlaces seriales de cada router con una subred distinta para establecer un canal comunicación entre ellos.\\
+	donde se le asignan IPs y gateway manualmente, y luego se configura el router asignándole a la interfaz una IP perteneciente a la subred común con los
+	PC. También se configuran las interfaces de los enlaces seriales de cada router con una subred distinta para establecer un canal comunicación entre ellos.
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{Configuracion_equipos.PNG}
-	\caption{Configuracion de los equipos}
+	\caption{Configuración de los equipos}
 	\end{figure}
 	\section{Configuración ruteo estático}
 	Se ingresa a la terminal del router, luego indicándoles la IP de destino, porque puerto sale, y la IP por donde da el salto
 	para llegar a destino, esto se debe hacer con cada interfaz del router, de manera que dirija cada paquete que reciba a una
 	interfaz y lo pueda enviar. Lo anterior descrito se debe hacer con cada router perteneciente a la topología, para que así las
-	subredes queden todas comunicadas entre sí.\\
+	subredes queden todas comunicadas entre sí.
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{Ruteo_estatico.PNG}
-	\caption{Configuracion de ruteo estatico en los router R0 y R3}
+	\caption{Configuración de ruteo estático en los router R0 y R3}
 	\end{figure}
-	\section{Configuracion ruteo dinámico}
+	\section{Configuración ruteo dinámico}
 	Se ingresa a la terminal del router y se activa RIP V1 de esta manera se configura automáticamente y solo tenemos que
 	indicarle al router cuál es la red que va a utilizar. Esto se logra al ingresar los comandos que estaban especificados en la
 	guía.\\
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{Ruteo_dinamico.PNG}
-	\caption{Configuracion de ruteo dinamico en los router R0 y R3}
+	\caption{Configuración de ruteo dinámico en los router R0 y R3}
 	\end{figure}
+	\newpage
 {\large \bf{Cuestionario: }}
 	\begin{enumerate}
 	    \item ¿Qué ventajas y desventajas se pueden apreciar en cada tipo de enrutamiento?\\\\
@@ -89,7 +90,7 @@
 	    	\item Se requiere un conocimiento avanzado.
 	    %(SIEMPRE SE PUEDEN AGREGAR MÁS)
 	    \end{itemize}
-            \item ¿En que se basa el enrutamiento dinámico para generar su ruta?\\
+            \item ¿En que se basa el enrutamiento dinámico para generar su ruta?\\\\
             	Se basa en la comunicación entre todos los routers de la red, los cuales comparten sus tablas de ruteo indicando en un principio cuales son las redes que están conectadas directamente a sus interfaces y periódicamente comparten sus tablas para mantener toda la red actualizada en caso de alguna modificación.
             	
             	El funcionamiento es el siguiente: Cada router envía un mensaje por todas sus interfaces pidiéndole a los otros que le envíen sus tablas de ruteo. Luego cada cierto tiempo los routers difunden mensajes indicando cuales son las redes a las que acceden sus interfaces y la distancia a la que están de ellas.
