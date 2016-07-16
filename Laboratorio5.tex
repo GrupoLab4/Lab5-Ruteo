@@ -72,13 +72,14 @@
 	    Enrutamiento Dinámico:
 	    \begin{itemize}
 	    	\item En el mantenimiento de las rutas el encargado casi no debe participar.
-	    	\item Esta configuración tiende a tener menos errores.
+	    	\item Esta configuración tiende a tener menos errores ya que los routers hacen el trabajo de actualización de la red periodicamente.
+	    	\item Las tablas de ruteo se calculan mediante un algoritmo decidiendo cual es la ruta óptima que debiese tomar un paquete.
 	    \end{itemize}
 	    \underline{DESVENTAJAS}:\\
 	    Enrutamiento Estático:
 	    \begin{itemize}
 	    	\item Para redes grandes es complicado de configurar.
-	    	\item La configuración es propensa a errores.
+	    	\item La configuración es propensa a errores ya que es el administrador quien ingresa las rutas manualmente.
 	    	\item La configuración, mantención y actualización de rutas se debe hacer manualmente.
 	    	\item No permite una escalabilidad en caso de gran crecimiento de la topología.
 	    \end{itemize}
@@ -89,7 +90,9 @@
 	    %(SIEMPRE SE PUEDEN AGREGAR MÁS)
 	    \end{itemize}
             \item ¿En que se basa el enrutamiento dinámico para generar su ruta?\\
-            	Cada router envía un mensaje por todas sus interfaces pidiéndole a los otros routers que le envíen sus tablas de ruteo. Luego cada cierto tiempo los routers difunden mensajes indicando cuales son las redes a las que acceden sus interfaces y la distancia a la que están de ellas.
+            	Se basa en la comunicación entre todos los routers de la red, los cuales comparten sus tablas de ruteo indicando en un principio cuales son las redes que están conectadas directamente a sus interfaces y periódicamente comparten sus tablas para mantener toda la red actualizada en caso de alguna modificación.
+            	
+            	El funcionamiento es el siguiente: Cada router envía un mensaje por todas sus interfaces pidiéndole a los otros que le envíen sus tablas de ruteo. Luego cada cierto tiempo los routers difunden mensajes indicando cuales son las redes a las que acceden sus interfaces y la distancia a la que están de ellas.
  
   	     
 	\end{enumerate}
